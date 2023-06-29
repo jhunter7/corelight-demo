@@ -144,7 +144,7 @@ resource "aws_iam_policy_attachment" "lambda_policy_attachment" {
 
 resource "aws_iam_policy_attachment" "attach_sqs" {
   name       = "LambdaPolicyAttachment"
-  roles      = [aws_iam_role.lambda_role]
+  roles      = [aws_iam_role.lambda_role.name]
   policy_arn = "arn:aws:iam::aws:policy/AmazonSQSFullAccess"
 }
 
